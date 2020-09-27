@@ -6,13 +6,13 @@
                     type="date"
                     :class="errorClasses"
                     :color="color"
+                    :locale="locale"
                     :placeholder="placeholder"
                     inputClass="w-full form-control form-input form-input-bordered date-ltr"
                     :format="format"
                     :initial-value="persianDate"
                     v-model="value"
             ></date-picker>
-            <span class="text-80 text-sm ml-2">({{ userTimezone }})</span>
         </template>
     </default-field>
 </template>
@@ -24,7 +24,6 @@
 
     export default {
         mixins: [FormField, HandlesValidationErrors],
-
         props: ['resourceName', 'resourceId', 'field'],
         computed: {
             format() {
@@ -33,28 +32,27 @@
             persianDate() {
                 if (!this.field.value) {
                     return '';
-
                 } else {
                     return jMoment(this.field.value).format(this.format);
                 }
-
             },
             placeholder() {
-                return jMoment().format(this.format)
+                return this.field.placeholder || jMoment().format(this.format)
             },
             altDateValue() {
                 return this.value ? jMoment(this.value, this.format).format('YYYY-MM-DD') : '';
             },
             color() {
-                return this.field.color || `rgb(30, 136, 229)`;
+                return this.field.color || 'rgb(30, 136, 229)';
+            },
+            locale() {
+                return this.field.locale || 'fa,en';
             }
         },
         methods: {
             setInitialValue() {
-
                 this.value = this.persianDate;
             },
-
             fill(formData) {
                 formData.append(this.field.attribute, this.altDateValue || '');
             },

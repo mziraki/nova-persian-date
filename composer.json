@@ -1,5 +1,5 @@
 {
-    "name": "dpsoft/nova-persian-date",
+    "name": "mziraki/nova-persian-date",
     "description": "A Laravel Nova persian date field.",
     "keywords": [
         "laravel",

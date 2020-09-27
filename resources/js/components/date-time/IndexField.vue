@@ -18,8 +18,8 @@
 </script>
 
 <style>
-    .date-rtl{
-        direction: ltr!important;
+    .date-rtl {
+        direction: ltr !important;
         float: right;
     }
 </style>

@@ -44,4 +44,15 @@ class PersianDate extends Field
     {
         return $this->withMeta(compact('color'));
     }
+
+    /**
+     * Set datePicker Locale. See https://talkhabi.github.io/vue-persian-datetime-picker/#/locale
+     *
+     * @param $locale
+     * @return PersianDateTime
+     */
+    public function locale($locale)
+    {
+        return $this->withMeta(compact('locale'));
+    }
 }

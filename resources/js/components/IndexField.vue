@@ -16,6 +16,7 @@
         }
     }
 </script>
+
 <style>
     .date-rtl {
         direction: ltr !important;

@@ -14,11 +14,12 @@
                     this.field.value = `<span class="date-rtl">${date}</span>`;
                     this.field.asHtml = true;
                 }
-                return this.field.field;
+                return this.field;
             }
         }
     }
 </script>
+
 <style>
     .date-rtl {
         direction: ltr !important;
