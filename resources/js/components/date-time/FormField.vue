@@ -7,6 +7,8 @@
                     :class="errorClasses"
                     :color="color"
                     :locale="locale"
+                    min="378/10/11 00:00:00"
+                    max="1450/12/29 23:59:59"
                     :placeholder="placeholder"
                     inputClass="w-full form-control form-input form-input-bordered date-ltr"
                     :format="format"
