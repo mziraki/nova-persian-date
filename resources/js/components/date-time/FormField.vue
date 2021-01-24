@@ -6,6 +6,7 @@
                     type="datetime"
                     :class="errorClasses"
                     :color="color"
+                    compact-time
                     :locale="locale"
                     min="378/10/11 00:00:00"
                     max="1450/12/29 23:59:59"
