@@ -5,6 +5,7 @@
                     :id="field.name"
                     type="date"
                     :class="errorClasses"
+                    :clearable="true"
                     :color="color"
                     :locale="locale"
                     min="378/10/11"

@@ -5,6 +5,7 @@
                     :id="field.name"
                     type="datetime"
                     :class="errorClasses"
+                    :clearable="true"
                     :color="color"
                     compact-time
                     :locale="locale"
